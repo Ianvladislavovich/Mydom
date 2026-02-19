@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="new dash.css">
+</head>
+<body>
+    <div class="container">
+
+       <aside>
+        <div class="top">
+                <div class="logo">
+                <h2>SU<span class="danger">CCESS</span> </h2>
+            </div>
+            <div class="close" id="close_btn">
+                <span class="material-symbols-sharp"> close </span>
+            </div>
+        </div>
+                       
+
+
+
+        <div class="sidebar">
+
+            <a href="#">
+                <span class="material-symbols-sharp"> dashboard </span>
+                <h3>Dashboard</h3>
+            </a>  
+                <a href="#">
+                <span class="material-symbols-sharp">  demography </span>
+                <h3>Customers</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  analytics </span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  inbox_text </span>
+                <h3>Messages</h3>
+                <span class="msg count" id="messageCount">0</span> 
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  inventory </span>
+                <h3>Products</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  note_stack </span>
+                <h3>Reports</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  settings </span>
+                <h3>Settings</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  add_shopping_cart </span>
+                <h3>Add Products</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-sharp">  exit_to_app </span>
+                <h3>Log Out</h3>
+            </a>
+            
+
+        </div>
+
+
+       </aside> 
+
+       <main>
+        <h1>Dashboard</h1>
+
+        <div class="date">
+            <input type="date">
+        </div>
+
+        <div class="insights">
+
+            <div class="sales">
+                <span class="material-symbols-sharp">trending_up</span>    
+                <div class="middle">
+                    <div class="left">
+                        <h3>Your Active Projects</h3>
+                        <h1>$25,023</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle r="30" cy="40" cx="40"></circle>
+                        </svg>
+                        <div class="number">80%</div>
+                    </div>
+                </div>  
+                <small>Last 24 Hours</small>       
+            </div>
+
+               <div class="expenses">
+                <span class="material-symbols-sharp">local_mall</span>    
+                <div class="middle">
+                    <div class="left">
+                        <h3>Your Feedback Score</h3>
+                        <h1>$25,023</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle r="30" cy="40" cx="40"></circle>
+                        </svg>
+                        <div class="number">80%</div>
+                    </div>
+                </div>  
+                <small>Last 24 Hours</small>       
+            </div>
+
+              <div class="income">
+                <span class="material-symbols-sharp">Stacked_Line_Chart</span>    
+                <div class="middle">
+                    <div class="left">
+                        <h3>Success</h3>
+                        <h1>$25,023</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle r="30" cy="40" cx="40"></circle>
+                        </svg>
+                        <div class="number">80%</div>
+                    </div>
+                </div>  
+                <small>Last 24 Hours</small>       
+            </div>
+
+        </div>
+<div class="recent_order">
+    <h1>Recent Orders</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Product Number</th>
+                <th>Payments</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Mini USB</td>
+                <td>456</td>
+                <td>Due</td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+            </tr>
+
+             <tr>
+                <td>Mini USB</td>
+                <td>456</td>
+                <td>Due</td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+            </tr>
+
+             <tr>
+                <td>Mini USB</td>
+                <td>456</td>
+                <td>Due</td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+            </tr>
+
+             <tr>
+                <td>Mini USB</td>
+                <td>456</td>
+                <td>Due</td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+
+
+
+        </main>
+        
+
+        <div class="right">
+        <div class="top">
+
+                <button id="menu_bar">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp ">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p><b>User</b></p>
+                        <p>Admin</p>
+                        <smal class="text-muted"></smal>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/rrr.jpg" alt=""> 
+                    </div>
+                </div>
+
+            </div> 
+
+            <div class="recent_updates">
+                <h2>Recent Update</h2>
+                <div class="updates">
+                <div class="update">
+                    <div class="profile-photo">
+                     <img src="images/rrr.jpg" alt="">    
+                    </div>
+                    <div class="message">
+                        <p><b>Success</b> Placed an order</p>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="profile-photo">
+                     <img src="images/rrr.jpg" alt="">    
+                    </div>
+                    <div class="message">
+                        <p><b>Success</b> Placed an order</p>
+                    </div>
+                    <div class="update">
+                    <div class="profile-photo">
+                     <img src="images/rrr.jpg" alt="">    
+                    </div>
+                    <div class="message">
+                        <p><b>Success</b> Placed an order</p>
+                    </div>
+                </div>
+                </div>
+            
+            
+            </div>
+            <div class="sales_analytics">
+                <h2>Copywriting Analitics</h2>
+
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">analytics</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Projects completed</h3>
+                            <small class="text-muted"></small>
+                        </div>
+                        <h5 class="danger">17%</h5>
+                        <h3>30</h3>                        
+                    </div>
+                </div>
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">analytics</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Average Feedback Score</h3>
+                            <small class="text-muted"></small>
+                        </div>
+                        <h5 class="danger">17%</h5>
+                        <h3>3849</h3>                        
+                    </div>
+                </div>
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">analytics</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Client responses rate</h3>
+                            <small class="text-muted"></small>
+                        </div>
+                        <h5 class="danger">17%</h5>
+                        <h3>3849</h3>                        
+                    </div>
+                </div>
+
+                </div>
+        <div class="item add_products">
+            <div>
+                <span class="material-symbols-sharp">note_add</span>
+            </div>
+        </div>
+            </div>
+
+        
+       
+    </div>
+
+    <script>
+        // Generate a random number between 1 and 100
+        const randomMessageCount = Math.floor(Math.random() * 100) + 1;
+
+        // Set the random number as the content of the "messageCount" span
+        document.getElementById('messageCount').textContent = randomMessageCount;
+
+        // Event listener to handle active class
+        const links = document.querySelectorAll('aside .sidebar a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Prevent the default link behaviour
+                event.preventDefault();
+
+                // Remove active class from all links
+                links.forEach(item => item.classList.remove('active'));
+
+                // Add active class to the clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+
+ <script>
+    // Fetch updates from the backend
+    async function fetchUpdates() {
+      try {
+        const response = await fetch('http://localhost:5000/api/updates');
+        const data = await response.json();
+        renderUpdates(data);
+      } catch (error) {
+        console.error('Error fetching updates:', error);
+      }
+    }
+
+    // Render updates in the DOM
+    function renderUpdates(updates) {
+      const updatesContainer = document.getElementById('updates');
+      updatesContainer.innerHTML = ''; // Clear existing updates
+
+      updates.forEach(update => {
+        const updateElement = document.createElement('div');
+        updateElement.classList.add('update');
+
+        updateElement.innerHTML = `
+          <div class="profile-photo">
+            <img src="${update.photo}" alt="${update.name}">
+          </div>
+          <div class="message">
+            <p><b>${update.name}</b> ${update.message}</p>
+          </div>
+        `;
+
+        updatesContainer.appendChild(updateElement);
+      });
+    }
+
+    // Fetch and render updates on page load
+    fetchUpdates();
+  </script>
+
+
+
+
+</body>
+</html>
+
+    <script src="Dashboard.js"></script>

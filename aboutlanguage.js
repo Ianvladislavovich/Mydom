@@ -1,0 +1,197 @@
+const dropDown = document.querySelector('.drop-down');
+const list = document.querySelector('.list');
+const selected = document.querySelector('.selected');
+const selectedImg = document.querySelector('.selectedImg');
+const navbarLinks = document.querySelectorAll('.navbar a');
+const h2Elements = document.querySelectorAll('h2');
+const h3Element = document.querySelector('h3');
+const h4Element = document.querySelector('h4');
+const h5Element = document.querySelector('h5');
+const h6Elements = document.querySelectorAll('h6');
+const roleParagraphs = document.querySelectorAll('p.role');
+const aboutUsParagraph = document.querySelector('.aboutus-text p');
+const teamMemberParagraphs = document.querySelectorAll('.team_member p:not(.role)');
+const mobileNavbarLinks = document.querySelectorAll('.mobile-nav a');
+const footerLinks = document.querySelectorAll('.footer__link--items a');
+
+
+dropDown.addEventListener('click', () => {
+  list.classList.toggle('show');
+});
+
+list.addEventListener('click', (e) => {
+  const img = e.target.querySelector('img');
+  const text = e.target.querySelector('.text');
+
+  selectedImg.src = img.src;
+  selected.textContent = text.textContent;
+
+  translatePage(selected.textContent.toLowerCase());
+});
+
+function translatePage(language) {
+  if (language === 'ru') {
+    navbarLinks[0].textContent = 'SUCCESS';
+    navbarLinks[1].textContent = 'Домой';
+    navbarLinks[2].textContent = 'Услуги';
+    navbarLinks[3].textContent = 'Связаться';
+    navbarLinks[4].textContent = 'О нас';
+    navbarLinks[5].textContent = 'Регистрация';
+    h2Elements[0].textContent = 'О нас';
+    h2Elements[1].textContent = 'Свяжитесь';
+    h2Elements[2].textContent = 'Сообщества';
+    h2Elements[3].textContent = 'Mедиа';
+    h3Element.textContent = 'О НАС';
+    h4Element.textContent = 'Команда копирайтеров';
+    h5Element.textContent = 'Наша Команда';
+    h6Elements[0].textContent = 'Pikulik Jan';
+    h6Elements[1].textContent = 'Pikulik Vladislav';
+    h6Elements[2].textContent = 'Pikulik katerina';
+    roleParagraphs[0].textContent = 'Основатель';
+    roleParagraphs[1].textContent = 'Директор по технологиям';
+    roleParagraphs[2].textContent = 'Директор по контенту';
+    aboutUsParagraph.textContent = 'Мы команда опытных копирайтеров, которые с увлечением создают увлекательный контент, отражающий суть вашего бренда и привлекающий вашу целевую аудиторию. Наша миссия - помочь бизнесам и частным лицам эффективно коммуницировать свое сообщение с помощью контента высокого качества, который резонирует с читателями. Независимо от того, нужен ли вам одноразовый проект или постоянная поддержка контента, мы здесь, чтобы помочь. Свяжитесь с нами сегодня, чтобы узнать больше о наших услугах и о том, как мы можем помочь вам повысить эффективность вашего бренда. Спасибо за рассмотрение наших услуг в сфере копирайтинга, и мы с нетерпением ждем сотрудничества с вами.';
+    teamMemberParagraphs[0].textContent = 'Ян - видоизменительный основатель Success Guaranteed. С годами опыта в индустрии, его страсть к инновациям и приверженность к совершенству стали двигателем успеха нашей компании. Как лидер, он устанавливает стратегическое направление развития компании, способствуя культуре роста и сотрудничества.';
+    teamMemberParagraphs[1].textContent = 'Владислав - энтузиаст технологий и гениальный ум за нашими передовыми технологическими решениями. С обширным опытом в разработке программного обеспечения и страстью к инновациям, он возглавляет нашу техническую команду для создания безупречных и масштабируемых решений. Его стратегическое руководство и технические знания позволяют нам оставаться впереди в постоянно меняющемся мире технологий.';
+    teamMemberParagraphs[2].textContent  = 'Катерина - талантливый словесник и творческая сила за нашим увлекательным контентом. С опытом в журналистике и чувством искусства рассказа, Катерина оживляет нашу марку через увлекательные повествования. Ее экспертиза в стратегии контента гарантирует, что наши сообщения резонируют с аудиторией, сохраняя последовательный и подлинный голос бренда.';
+    footerLinks[0].textContent = 'Как это работает';
+    footerLinks[1].textContent = 'Отзывы';
+    footerLinks[2].textContent = 'Карьера';
+    footerLinks[3].textContent = 'Условия';
+    footerLinks[4].textContent = 'Контакт';
+    footerLinks[5].textContent = 'Поддержка';
+    footerLinks[6].textContent = 'Рабочее время';
+    footerLinks[7].textContent = 'Физический адрес';
+    footerLinks[8].textContent = 'Инструменты';
+    footerLinks[9].textContent = 'Отзывы';
+    footerLinks[10].textContent = 'Cообщества';
+    footerLinks[11].textContent = 'Новости индустрии';
+    footerLinks[12].textContent = 'Instagram';
+    footerLinks[13].textContent = 'Facebook';
+    footerLinks[14].textContent = 'YouTube';
+    footerLinks[15].textContent = 'Twitter';
+} else if (language === 'en') {
+    // Perform translation to English
+    navbarLinks[0].textContent = 'SUCCESS';
+    navbarLinks[1].textContent = 'Home';
+    navbarLinks[2].textContent = 'Services';
+    navbarLinks[3].textContent = 'Contact Us';
+    navbarLinks[4].textContent = 'About Us';
+    navbarLinks[5].textContent = 'Sign Up';
+    h2Elements[0].textContent = 'About Us';
+    h2Elements[1].textContent = 'Contact Us';
+    h2Elements[2].textContent = 'Communities';
+    h2Elements[3].textContent = 'Social Media';
+    h3Element.textContent = '>ABOUT US';
+    h4Element.textContent = 'A team of Copywriters';
+    h5Element.textContent = 'Our Team';
+    h6Elements[0].textContent = 'Pikulik Jan';
+    h6Elements[1].textContent = 'Pikulik Vladislav';
+    h6Elements[2].textContent = 'Pikulik katerina';
+    roleParagraphs[0].textContent = 'CEO/Founder,';
+    roleParagraphs[1].textContent = 'Head of Technology';
+    roleParagraphs[2].textContent = 'Head of Content';
+    aboutUsParagraph.textContent = 'We are a team of experienced copywriters who are passionate about crafting compelling content that captures the essence of your brand and engages your target audience. Our mission is to help businesses and individuals communicate their message effectively through high-quality content that resonates with their readers. Whether you need a one-time project or ongoing content support, we are here to help. Contact us today to learn more about our services and how we can help you elevate your brands messaging. Thank you for considering our copywriting services, and we look forward to working with you.';
+    teamMemberParagraphs[0].textContent = 'Jan is the visionary founder of Success Guaranteed. With years of experience in the industry, his passion for innovation and commitment to excellence have been the driving force behind our company s success. As a leader, he sets the strategic direction of the company, fostering a culture of growth and collaboration.';
+    teamMemberParagraphs[1].textContent = 'Vladislav is a tech enthusiast and the mastermind behind our cutting-edge technological solutions. With extensive experience in software development and a passion for innovation, he leads our technology team to deliver seamless and scalable solutions. His strategic guidance and technical expertise enable us to stay ahead in the ever-evolving tech landscape.';
+    teamMemberParagraphs[2].textContent  = 'Katerina is a talented wordsmith and the creative force behind our compelling content. With a background in journalism and a flair for storytelling, Sarah brings our brand to life through engaging narratives. Her expertise in content strategy ensures that our messages resonate with our audience, while maintaining a consistent and authentic brand voice.';
+    footerLinks[0].textContent = 'How it works';
+    footerLinks[1].textContent = 'Testimonials';
+    footerLinks[2].textContent = 'Careers';
+    footerLinks[3].textContent = 'Terms of service';
+    footerLinks[4].textContent = 'Contact';
+    footerLinks[5].textContent = 'Support';
+    footerLinks[6].textContent = 'Business Hours';
+    footerLinks[7].textContent = 'Physical Address';
+    footerLinks[8].textContent = 'Writing tools';
+    footerLinks[9].textContent = 'Testimonials';
+    footerLinks[10].textContent = 'Writing Communities';
+    footerLinks[11].textContent = 'Industry News';
+    footerLinks[12].textContent = 'Instagram';
+    footerLinks[13].textContent = 'Facebook';
+    footerLinks[14].textContent = 'YouTube';
+    footerLinks[15].textContent = 'Twitter';
+  } else if (language === 'pl') {
+    // Perform translation to Polish
+    navbarLinks[0].textContent = 'SUCCESS';
+    navbarLinks[1].textContent = 'Strona główna';
+    navbarLinks[2].textContent = 'Usługi';
+    navbarLinks[3].textContent = 'Skontaktuj';
+    navbarLinks[4].textContent = 'O nas';
+    navbarLinks[5].textContent = 'Zapiszsię';
+        h2Elements[0].textContent = 'O nas';
+        h2Elements[1].textContent = 'Skontaktuj';
+        h2Elements[2].textContent = 'Społeczność';
+        h2Elements[3].textContent = 'Społecznościowe';
+        h3Element.textContent = 'O NAS';
+        h4Element.textContent = 'Zespół copywriterów';
+        h5Element.textContent = 'Nasz Zespół';
+        h6Elements[0].textContent = 'Pikulik Jan';
+        h6Elements[1].textContent = 'Pikulik Vladislav';
+        h6Elements[2].textContent = 'Pikulik katerina';
+        roleParagraphs[0].textContent = 'Założyciel';
+        roleParagraphs[1].textContent = 'Dyrektor Technologii';
+        roleParagraphs[2].textContent = 'Dyrektor ds. Treści';
+        aboutUsParagraph.textContent = 'Jesteśmy zespołem doświadczonych copywriterów, którzy pasjonują się tworzeniem przekonujących treści, które oddają istotę Twojej marki i angażują Twoją docelową publiczność. Nasza misja polega na pomocy firmom i osobom w skutecznym komunikowaniu swojej wiadomości poprzez wysokiej jakości treści, które rezonują z czytelnikami. Bez względu na to, czy potrzebujesz jednorazowego projektu czy stałego wsparcia w zakresie treści, jesteśmy tutaj, aby pomóc. Skontaktuj się z nami jeszcze dziś, aby dowiedzieć się więcej o naszych usługach i jak możemy pomóc w podniesieniu skuteczności Twojego przekazu marki. Dziękujemy za rozważenie naszych usług copywritingowych i z niecierpliwością czekamy na współpracę z Tobą.';
+        teamMemberParagraphs[0].textContent = "Jan jest wizjonerskim założycielem Success Guaranteed. Z wieloletnim doświadczeniem w branży, jego pasja do innowacji i zaangażowanie w doskonałość były siłą napędową naszego sukcesu. Jako lider, ustala strategiczną drogę rozwoju firmy, stymulując kulturę wzrostu i współpracy.";
+        teamMemberParagraphs[1].textContent = "Vladislav to entuzjasta technologii i mózg stojący za naszymi nowatorskimi rozwiązaniami technologicznymi. Z bogatym doświadczeniem w tworzeniu oprogramowania i pasją do innowacji, prowadzi nasz zespół technologiczny, dostarczając płynne i skalowalne rozwiązania. Jego strategiczne kierowanie i wiedza techniczna pozwalają nam utrzymać się na czele w ciągle zmieniającym się świecie technologii.";
+        teamMemberParagraphs[2].textContent  = "Katerina to utalentowana autorka i kreatywna siła stoiąca za naszym przekonującym treścią. Z doświadczeniem w dziennikarstwie i talentem do opowiadania historii, Katerina ożywia naszą markę poprzez wciągające narracje. Jej wiedza z zakresu strategii treści zapewnia, że nasze przekazy rezonują z naszą publicznością, jednocześnie utrzymując spójny i autentyczny głos marki.";
+        footerLinks[0].textContent = 'Jak to działa';
+footerLinks[1].textContent = 'Opinie';
+footerLinks[2].textContent = 'Kariera';
+footerLinks[3].textContent = 'Warunki';
+footerLinks[4].textContent = 'Kontakt';
+footerLinks[5].textContent = 'Wsparcie';
+footerLinks[6].textContent = 'Godziny pracy';
+footerLinks[7].textContent = 'Adres fizyczny';
+footerLinks[8].textContent = 'Narzędzia';
+footerLinks[9].textContent = 'Opinie';
+footerLinks[10].textContent = 'Społeczności';
+footerLinks[11].textContent = 'Wiadomości';
+footerLinks[12].textContent = 'Instagram';
+footerLinks[13].textContent = 'Facebook';
+footerLinks[14].textContent = 'YouTube';
+footerLinks[15].textContent = 'Twitter';    
+      } else if (language === 'es') {
+        // Perform translation to Spanish
+        navbarLinks[0].textContent = '¡ÉXITO!';
+    navbarLinks[1].textContent = 'Inicio';
+    navbarLinks[2].textContent = 'Servicios';
+    navbarLinks[3].textContent = 'Contáctenos';
+    navbarLinks[4].textContent = 'Sobre';
+    navbarLinks[5].textContent = '¡Regístrese!';
+    h2Elements[0].textContent = 'Nosotros';
+    h2Elements[1].textContent = 'Contáctenos';
+    h2Elements[2].textContent = 'Comunidades';
+    h2Elements[3].textContent = 'Redes';
+    h3Element.textContent = 'SOBRE NOSOTROS';
+    h4Element.textContent = 'Un equipo de redactores';
+    h5Element.textContent = 'Nuestro Equipo';
+    h6Elements[0].textContent = 'Pikulik Jan';
+    h6Elements[1].textContent = 'Pikulik Vladislav';
+    h6Elements[2].textContent = 'Pikulik katerina';
+    roleParagraphs[0].textContent = 'Fundador,';
+    roleParagraphs[1].textContent = 'Director de Tecnología';
+    roleParagraphs[2].textContent = 'Director de Contenidos';
+    aboutUsParagraph.textContent = 'Somos un equipo de redactores con experiencia apasionados por crear contenido convincente que capture la esencia de tu marca y atraiga a tu público objetivo. Nuestra misión es ayudar a empresas e individuos a comunicar su mensaje de manera efectiva a través de contenido de alta calidad que resuene con sus lectores. Ya sea que necesites un proyecto único o apoyo continuo en contenido, estamos aquí para ayudarte. Contáctanos hoy mismo para obtener más información sobre nuestros servicios y cómo podemos ayudarte a mejorar el mensaje de tu marca. Gracias por considerar nuestros servicios de redacción, esperamos con ansias trabajar contigo.';
+    teamMemberParagraphs[0].textContent = 'Jan es el visionario fundador de Success Guaranteed. Con años de experiencia en la industria, su pasión por la innovación y su compromiso con la excelencia han sido la fuerza impulsora detrás del éxito de nuestra empresa. Como líder, establece la dirección estratégica de la empresa, fomentando una cultura de crecimiento y colaboración.';
+    teamMemberParagraphs[1].textContent = 'Vladislav es un entusiasta de la tecnología y el cerebro detrás de nuestras soluciones tecnológicas de vanguardia. Con una amplia experiencia en desarrollo de software y una pasión por la innovación, lidera nuestro equipo de tecnología para ofrecer soluciones fluidas y escalables. Su guía estratégica y experiencia técnica nos permiten mantenernos a la vanguardia en el siempre cambiante panorama tecnológico.';
+    teamMemberParagraphs[2].textContent = 'Katerina es una hábil escritora y la fuerza creativa detrás de nuestro contenido convincente. Con experiencia en periodismo y habilidad para contar historias, Katerina da vida a nuestra marca a través de narrativas atractivas. Su experiencia en estrategia de contenido garantiza que nuestros mensajes resuenen con nuestra audiencia, manteniendo una voz de marca consistente y auténtica.';
+    footerLinks[0].textContent = 'Cómo funciona';
+footerLinks[1].textContent = 'Testimonios';
+footerLinks[2].textContent = 'Carreras';
+footerLinks[3].textContent = 'Términos de servicio';
+footerLinks[4].textContent = 'Contacto';
+footerLinks[5].textContent = 'Soporte';
+footerLinks[6].textContent = 'Horario comercial';
+footerLinks[7].textContent = 'Dirección física';
+footerLinks[8].textContent = 'Herramientas';
+footerLinks[9].textContent = 'Testimonios';
+footerLinks[10].textContent = 'Comunidades';
+footerLinks[11].textContent = 'Noticias';
+footerLinks[12].textContent = 'Instagram';
+footerLinks[13].textContent = 'Facebook';
+footerLinks[14].textContent = 'YouTube';
+footerLinks[15].textContent = 'Twitter';
+  }
+}
